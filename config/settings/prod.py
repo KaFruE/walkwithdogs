@@ -1,9 +1,11 @@
-from .base import *
+from ._base import *
 import os
 
 DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS += []
+
+WSGI_APPLICATION = 'config.wsgi.prod.application'
 
 INSTALLED_APPS += [
 ]

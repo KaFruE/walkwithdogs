@@ -1,4 +1,4 @@
-from .base import *
+from ._base import *
 import os
 
 DEBUG = True
@@ -7,7 +7,9 @@ INTERNAL_IPS = [
     '127.0.0.1',
 ]
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS += []
+
+WSGI_APPLICATION = 'config.wsgi.dev.application'
 
 INSTALLED_APPS += [
     'debug_toolbar',
